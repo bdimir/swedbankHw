@@ -1,0 +1,69 @@
+<form [formGroup]="frmAdditionalClientData">
+  <h3 class="form-header">Papildomi duomenys</h3>
+
+  <div class="flex-parent">
+    <div class="flex-col labels-row">
+      <label class="form-label">Išsilavinimas *</label>
+    </div>
+    <div class="flex-col">
+      <mat-form-field>
+        <mat-select formControlName="education">
+          <mat-option
+            *ngFor="let day of educations" [value]="day.value">
+            {{day.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div class="flex-parent">
+    <div class="flex-col labels-row">
+      <label class="form-label">Užimamos pareigos *</label>
+    </div>
+    <div class="flex-col">
+      <mat-form-field>
+        <mat-select formControlName="jobPosition">
+          <mat-option
+            *ngFor="let day of jobPositions" [value]="day.value">
+            {{day.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div class="flex-parent">
+    <div class="flex-col labels-row">
+      <label class="form-label">Įstaigos, kurioje dirbate, veiklos sritis *</label>
+    </div>
+    <div class="flex-col">
+      <mat-form-field class="width-control">
+        <mat-select formControlName="jobField">
+          <mat-option
+            *ngFor="let day of jobFields" [value]="day.value">
+            {{day.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div class="flex-parent">
+    <div class="flex-col labels-row">
+      <label class="form-label">Darbo trukmė dabartinėje darbovietėje *</label>
+    </div>
+    <div class="flex-col">
+      <mat-form-field>
+        <mat-select formControlName="jobPeriod">
+          <mat-option
+            *ngFor="let day of jobPeriods" [value]="day.value">
+            {{day.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+
+
+</form>

@@ -1,0 +1,44 @@
+<form [formGroup]="frmClientData">
+  <h3 class="form-header">Kliento duomenys</h3>
+
+  <div class="flex-parent">
+    <div class="flex-col labels-row">
+      <label class="form-label">Vardas *</label>
+    </div>
+    <div class="flex-col">
+      <mat-form-field>
+        <input matInput value=""
+               type="text"
+               formControlName="name">
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div class="flex-parent">
+    <div class="flex-col labels-row">
+      <label class="form-label">Pavardė *</label>
+    </div>
+    <div class="flex-col">
+      <mat-form-field>
+        <input matInput value=""
+               type="text"
+               formControlName="surname">
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div class="flex-parent">
+    <div class="flex-col labels-row">
+      <label class="form-label">Asmens kodas *</label>
+    </div>
+    <div class="flex-col">
+      <mat-form-field>
+        <input matInput value=""
+               type="text"
+               formControlName="id">
+      </mat-form-field>
+    </div>
+  </div>
+
+
+</form>

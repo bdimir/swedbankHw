@@ -1,0 +1,48 @@
+<mat-card>
+
+  <h3 class="form-header">Kontaktiniai duomenys</h3>
+
+  <form [formGroup]="frmStepFour">
+
+    <div class="flex-parent">
+      <div class="flex-col labels-row">
+        <label class="form-label">Telefonas *</label>
+      </div>
+
+      <div class="flex-col">
+        <mat-form-field style="width: 210px">
+          <span matPrefix>+370 &nbsp;</span>
+          <input matInput value=""
+                 type="number"
+                 label="phone"
+                 formControlName="phone">
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="flex-parent">
+      <div class="flex-col labels-row">
+        <label class="form-label">Pastabos </label>
+      </div>
+
+      <div class="flex-col">
+        <mat-form-field class="width-control">
+          <textarea matInput
+                    formControlName="info"
+                    maxlength="500"
+                    type="text"
+                    cdkAutosizeMinRows="5"
+                    cdkAutosizeMaxRows="5" #textAreaElement></textarea>
+        </mat-form-field>
+        <div>Liko simbolių: {{500 - textAreaElement.value.length}}</div>
+      </div>
+    </div>
+
+
+  </form>
+
+  <mat-card-actions>
+    <button color="primary" mat-raised-button matStepperPrevious>Atgal</button>
+    <button color="primary" mat-raised-button (click)="validateForm()">Pirmyn</button>
+  </mat-card-actions>
+</mat-card>

@@ -1,0 +1,33 @@
+<mat-card>
+
+  <form [formGroup]="frmStepTwo">
+    <div class="flex-parent">
+      <div class="flex-col labels-row">
+        <label class="form-label">Mėnesinis atlyginimas atskaičius mokesčius * </label>
+      </div>
+      <div class="flex-col">
+        <button mat-mini-fab
+                matTooltip="Nurodykite 'į rankas' per mėnesį jūsų gaunamas oficialias pajamas."
+                class="help-tooltip-btn"
+                matTooltipClass="help-tooltip">
+          ?
+        </button>
+      </div>
+      <div class="flex-col">
+        <mat-form-field>
+          <input matInput value=""
+                 type="number"
+                 formControlName="salary">
+          <span matSuffix> EUR</span>
+        </mat-form-field>
+      </div>
+    </div>
+
+  </form>
+
+  <mat-card-actions>
+    <button color="primary" mat-raised-button matStepperPrevious>Atgal</button>
+    <button color="primary" mat-raised-button (click)="validateForm()">Pirmyn</button>
+  </mat-card-actions>
+
+</mat-card>

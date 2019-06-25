@@ -1,0 +1,10 @@
+.width-control {
+  width: 400px;
+}
+
+@media (max-width: 700px) {
+
+  .width-control {
+    width: 100%;
+  }
+}

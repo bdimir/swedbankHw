@@ -1,0 +1,128 @@
+<mat-card>
+
+
+  <h3 class="form-header">Santrauka</h3>
+  <div></div>
+
+
+  <div class="flex-parent summary-row">
+    <div class="flex-col">
+      <label class="form-label">Paskolos suma</label>
+    </div>
+    <div class="flex-col">
+      <label> {{(stepsSummary | async)?.amount }} EUR</label>
+    </div>
+  </div>
+
+  <div class="flex-parent summary-row">
+    <div class="flex-col">
+      <label class="form-label">Paskolos terminas</label>
+    </div>
+    <div class="flex-col">
+      <label> {{(stepsSummary | async)?.period }} mėnesiai</label>
+    </div>
+  </div>
+
+  <div class="flex-parent summary-row">
+    <div class="flex-col">
+      <label class="form-label">Paskolos ir palūkanų mokėjimo diena</label>
+    </div>
+    <div class="flex-col">
+      <label>{{(stepsSummary | async)?.payday }} d.</label>
+    </div>
+  </div>
+
+  <div class="flex-parent summary-row">
+    <div class="flex-col">
+      <label class="form-label">Mėnesinis atlyginimas atskaičius mokesčius</label>
+    </div>
+    <div class="flex-col">
+      <label>{{(stepsSummary | async)?.salary }} EUR</label>
+    </div>
+  </div>
+
+  <div class="flex-parent summary-row">
+    <div class="flex-col">
+      <label class="form-label">Vardas</label>
+    </div>
+    <div class="flex-col">
+      <label>{{(stepsSummary | async)?.name }} </label>
+    </div>
+  </div>
+
+  <div class="flex-parent summary-row">
+    <div class="flex-col">
+      <label class="form-label">Pavardė</label>
+    </div>
+    <div class="flex-col">
+      <label>{{(stepsSummary | async)?.surname }} </label>
+    </div>
+  </div>
+
+  <div class="flex-parent summary-row">
+    <div class="flex-col">
+      <label class="form-label">Asmens kodas</label>
+    </div>
+    <div class="flex-col">
+      <label>{{(stepsSummary | async)?.id }} </label>
+    </div>
+  </div>
+
+  <div class="flex-parent summary-row">
+    <div class="flex-col">
+      <label class="form-label">Išsilavinimas</label>
+    </div>
+    <div class="flex-col">
+      <label>{{(stepsSummary | async)?.education }} </label>
+    </div>
+  </div>
+
+  <div class="flex-parent summary-row">
+    <div class="flex-col">
+      <label class="form-label">Užimamos pareigos</label>
+    </div>
+    <div class="flex-col">
+      <label>{{(stepsSummary | async)?.jobPosition }} </label>
+    </div>
+  </div>
+
+  <div class="flex-parent summary-row">
+    <div class="flex-col">
+      <label class="form-label">Įstaigos, kurioje dirbate, veiklos sritis</label>
+    </div>
+    <div class="flex-col">
+      <label>{{(stepsSummary | async)?.jobField }} </label>
+    </div>
+  </div>
+
+  <div class="flex-parent summary-row">
+    <div class="flex-col">
+      <label class="form-label">Darbo trukmė dabartinėje darbovietėje</label>
+    </div>
+    <div class="flex-col">
+      <label>{{(stepsSummary | async)?.jobPeriod }} </label>
+    </div>
+  </div>
+
+  <div class="flex-parent summary-row">
+    <div class="flex-col">
+      <label class="form-label">Telefonas</label>
+    </div>
+    <div class="flex-col">
+      <label>+370 {{(stepsSummary | async)?.phone }} </label>
+    </div>
+  </div>
+
+  <div class="flex-parent summary-row">
+    <div class="flex-col">
+      <label class="form-label">Pastabos</label>
+    </div>
+    <div class="flex-col">
+      <label>{{(stepsSummary | async)?.info }} </label>
+    </div>
+  </div>
+
+
+  <button color="primary" mat-raised-button matStepperNext (click)="finish()">Siųsti</button>
+
+</mat-card>

@@ -1,0 +1,155 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+h1 {
+  color: #F35B1C;
+  font: 32px/32px HeadlineBlack, Arial, sans-serif;
+}
+
+.text-center {
+  text-align: center;
+}
+
+//  Buttons
+.button-orange {
+  cursor: pointer;
+  color: #fff;
+  border-radius: 3px;
+  line-height: 18px;
+  transition: color 0.3s ease-out;
+  transition: border-color 0.3s ease-out;
+  transition: background-color 0.3s ease-out;
+  background: none #EE7023;
+  border: 1px solid #EE7023;
+  display: inline-block;
+  -webkit-appearance: none;
+  text-decoration: none;
+  vertical-align: top;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 13px 15px;
+  font-size: 18px;
+  margin: -11px 0;
+}
+
+.button-orange:hover {
+  background: none #f35b1c;
+  text-decoration: none;
+}
+
+/* Material SnackBar style */
+$danger: red;
+$success: green;
+$warning: orange;
+
+.danger-notification {
+  color: white !important;
+  background: $danger !important;
+
+  .mat-button-wrapper {
+    color: white !important;
+  }
+}
+
+.success-notification {
+  color: white !important;
+  background: $success !important;
+
+  .mat-button-wrapper {
+    color: white !important;
+  }
+}
+
+.warning-notification {
+  color: white !important;
+  background: $warning !important;
+
+  .mat-button-wrapper {
+    color: white !important;
+  }
+}
+
+
+/*Slider*/
+.mat-slider:not(.mat-slider-disabled) {
+
+}
+
+.mat-slider-thumb-label {
+  transform: rotate(45deg) !important;
+  /*border-radius: 50% 50% 0 !important;*/
+  width: 70px !important;
+  height: 50px !important;
+  background-color: transparent !important;
+  top: -50px !important;
+  right: -35px !important;
+}
+
+.mat-slider-thumb {
+  transform: scale(1) !important;
+  background-color: #EE7023 !important;
+}
+
+.mat-slider-thumb-label-text {
+  opacity: 1 !important;
+  font-weight: bold;
+  color: #EE7023 !important;;
+}
+
+/*Form labels  */
+.form-label {
+  font-size: 15px;
+  color: #a38b80;
+  padding-right: 15px;
+}
+
+
+/*Flex  */
+.flex-parent {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.labels-row {
+  min-width: 270px;
+  text-align: right;
+  padding-top: 14px;
+}
+
+.form-header {
+  font-size: 20px;
+  height: 28px;
+  margin-top: 20px;
+  text-align: left;
+  border-bottom: 1px solid #80808042;
+  color: gray;
+  font-weight: 500;
+}
+
+@media (max-width: 700px) {
+
+  .labels-row {
+    text-align: left;
+    min-width: unset;
+    margin-bottom: 8px;
+  }
+
+  .flex-col {
+    width: 100%;
+  }
+
+  .flex-parent {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+}

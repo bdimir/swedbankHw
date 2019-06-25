@@ -1,0 +1,35 @@
+<h1>
+  Vartojimo paskolos paraiška
+</h1>
+
+<div class="text-center">
+  <mat-vertical-stepper linear #stepper>
+
+
+    <mat-step [completed]="isStep1Completed">
+      <ng-template matStepLabel>Paskolos suma</ng-template>
+      <app-step-one (nextClick)="onStepOneClick($event)"></app-step-one>
+    </mat-step>
+
+    <mat-step [completed]="isStep2Completed">
+      <ng-template matStepLabel>Pajamos ir įsipareigojimai</ng-template>
+      <app-step-two (nextClick)="onStepTwoClick($event)"></app-step-two>
+    </mat-step>
+
+    <mat-step [completed]="isStep3Completed">
+      <ng-template matStepLabel>Asmeniniai duomenys</ng-template>
+      <app-step-three (nextClick)="onStepThreeClick($event)"></app-step-three>
+    </mat-step>
+
+    <mat-step [completed]="isStep4Completed">
+      <ng-template matStepLabel>Kontaktai</ng-template>
+      <app-step-four (nextClick)="onStepFourClick($event)"></app-step-four>
+    </mat-step>
+
+    <mat-step>
+      <ng-template matStepLabel>Siuntimas</ng-template>
+      <app-step-summary></app-step-summary>
+    </mat-step>
+
+  </mat-vertical-stepper>
+</div>

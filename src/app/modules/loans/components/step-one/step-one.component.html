@@ -1,0 +1,60 @@
+<mat-card>
+
+
+  <form [formGroup]="frmStepOne">
+
+    <div class="flex-parent">
+      <div class="flex-col labels-row">
+        <label class="form-label">Paskolos suma *</label>
+      </div>
+      <div class="flex-col">
+        <mat-slider thumbLabel
+                    formControlName="amount"
+                    color="primary"
+                    min="500"
+                    max="20000"
+                    step="50"
+                    value="500"
+                    [displayWith]="formatLabel"></mat-slider>
+      </div>
+    </div>
+
+    <div class="flex-parent slider-container">
+      <div class="flex-col labels-row">
+        <label class="form-label">Paskolos terminas *</label>
+      </div>
+      <div class="flex-col">
+        <mat-slider thumbLabel
+                    formControlName="period"
+                    color="primary"
+                    min="6"
+                    max="59"
+                    step="1"
+                    value="6"
+                    [displayWith]="formatLabelMonth"></mat-slider>
+      </div>
+    </div>
+
+    <div class="flex-parent">
+      <div class="flex-col labels-row">
+        <label class="form-label">Paskolos ir palūkanų mokėjimo diena *</label>
+      </div>
+      <div class="flex-col">
+        <mat-form-field>
+          <mat-label>Diena</mat-label>
+          <mat-select formControlName="payday">
+            <mat-option
+              *ngFor="let day of paydays" [value]="day.value">
+              {{day.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+
+  </form>
+
+  <mat-card-actions>
+    <button color="primary" mat-raised-button (click)="validateForm()">Pirmyn</button>
+  </mat-card-actions>
+</mat-card>
