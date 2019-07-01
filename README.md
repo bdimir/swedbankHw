@@ -1,6 +1,10 @@
 # SwedBank
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.3.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.3. 
+
+# Task
+Create a form which is consist out of intro and at least 4-5 steps, add some validation and show all data in the last step.
+here is a demo: http://swedbank.eu.ridikas.serveriai.lt/
 
 ## Development server
 
