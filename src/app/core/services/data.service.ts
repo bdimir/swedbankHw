@@ -90,7 +90,7 @@ export class DataService {
   }
 
   GetSummary(): SummaryStepsRaw {
-    return Object.assign({}, this.summary);
+    return {...this.summary};
   }
 
   GetSummarySubscription(): Observable<SummaryStepsInfo> {
